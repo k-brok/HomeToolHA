@@ -8,8 +8,6 @@
   "image": "chunkk/webapp",
   "init": false,
   "arch": [
-    "aarch64",
-    "amd64",
     "armhf",
     "armv7"
   ],
