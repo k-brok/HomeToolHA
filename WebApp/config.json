@@ -1,11 +1,11 @@
 {
   "name": "ChunkkHT",
-  "version": "0.0.3",
+  "version": "24.28.1",
   "slug": "ChunkkHT",
-  "description": "Chunkk home tools makes your home easyer",
+  "description": "ChunkkHT",
   "url": "https://chunkk.nl",
   "startup": "application",
-  "image": "chunkk/webapp",
+  "image": "ghcr.io/net-daemon/netdaemon_addon4",
   "init": false,
   "arch": [
     "aarch64",
@@ -17,10 +17,10 @@
   "map": [
     "config:rw"
   ],
-  "ingress": true,
-  "hassio_api": false,
+  "ingress": false,
+  "hassio_api": true,
   "hassio_role": "default",
-  "homeassistant_api": false,
+  "homeassistant_api": true,
   "host_network": false,
   "options": {
     "log_level": "information",
@@ -29,11 +29,32 @@
   },
   "schema": {
     "log_level": "match(^(trace|debug|information|warning|error|critical)$)",
+    "app_config_folder": "str",
+    "app_assembly": "str?",
+    "mqtt_host": "str?",
+    "mqtt_port": "int(0,65535)?",
+    "mqtt_username": "str?",
+    "mqtt_password": "str?",
+    "mqtt_discovery_prefix": "str?",
+    "mqtt_use_tls": "bool?",
+    "mqtt_allow_untrusted_certificates": "bool?"
   },
+  "discovery": [
+    "mqtt"
+  ],
+  "services": [
+    "mqtt:want"
+  ],
   "ports": {
-    "80/tcp": 8631
-  },
-  "ports_description": {
-    "80/tcp": "Web interface"
+    "10000/tcp": null,
+    "10001/tcp": null,
+    "10002/tcp": null,
+    "10003/tcp": null,
+    "10004/tcp": null,
+    "20000/udp": null,
+    "20001/udp": null,
+    "20002/udp": null,
+    "20003/udp": null,
+    "20004/udp": null
   }
 }
