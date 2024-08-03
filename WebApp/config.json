@@ -5,7 +5,7 @@
   "description": "ChunkkHT",
   "url": "https://chunkk.nl",
   "startup": "application",
-  "image": "ghcr.io/net-daemon/netdaemon_addon4",
+  "image": "chunkk/webapp",
   "init": false,
   "arch": [
     "aarch64",
@@ -46,15 +46,6 @@
     "mqtt:want"
   ],
   "ports": {
-    "10000/tcp": null,
-    "10001/tcp": null,
-    "10002/tcp": null,
-    "10003/tcp": null,
-    "10004/tcp": null,
-    "20000/udp": null,
-    "20001/udp": null,
-    "20002/udp": null,
-    "20003/udp": null,
-    "20004/udp": null
+    "80/tcp": 8635
   }
 }
