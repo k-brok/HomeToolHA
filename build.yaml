@@ -1,0 +1,9 @@
+---
+squash: false
+build_from:
+  arm64: chunkk/webapp:latest
+  aarch64: chunkk/webapp:latest
+  amd64: chunkk/webapp:latest
+  armv7: chunkk/webapp:latest
+  i386: chunkk/webapp:latest
+args: {}
